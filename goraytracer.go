@@ -13,15 +13,15 @@ func (t Tuple) String() string {
 	if t.w == 1.0 {
 		kind = "Point"
 	}
-	return fmt.Sprintf("x: %f\ny: %f\nz: %f\nType: %s", t.x, t.y, t.z, kind)
+	return fmt.Sprintf("x: %f\ny: %f\nz: %f\nType: %s\n", t.x, t.y, t.z, kind)
 }
 
-func point(x, y, z float64) *Tuple {
-	return &Tuple{x: x, y: y, z: z, w: 1.0}
+func point(x, y, z float64) Tuple {
+	return Tuple{x: x, y: y, z: z, w: 1.0}
 }
 
-func vector(x, y, z float64) *Tuple {
-	return &Tuple{x: x, y: y, z: z, w: 0.0}
+func vector(x, y, z float64) Tuple {
+	return Tuple{x: x, y: y, z: z, w: 0.0}
 }
 
 func main() {
